@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<title>Lift Detox Caps</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<style type="text/css">
+		#count{
+		    color: white !important;
+		    font-size: 11px !important;
+		    font-weight: 900 !important;
+		    text-align: center !important;
+		}
+
+	    #faixa {
+	    	background-color: #ff3b3b;
+		    position: fixed;
+		    width: 100%;
+		    left: 0;
+		    z-index: 1000;
+	    }
+	</style>
+
+<!-- ****** PIXEL AQUI ******* -->
+
+
+<!-- ****** FIM DO PIXEL ******* -->
+
+</head>
+<body onload="barra()">
+
+		<div id="faixa">
+			<p id="count"></p>	
+		</div>
+
+		<img class="logo" src="img/TOPO.png">
+		<img class="headline" src="img/HL.png">
+
+		<!--Form Top-->
+		<div id="form" class="login-box">
+		<h2 id="segundo" ><span class="h2-b">Tudo Certo!</span><br>Ultimas unidades em estoque. Aperte no botão abaixo!</h2>
+		  	<form id="forml" >
+		    
+			    <a href="../LiftDetoxCaps">
+			      <span></span>
+			      <span></span>
+			      <span></span>
+			      <span></span>
+			      Site oficial
+			    </a>
+		  	</form>
+		  
+		</div>
+		
+	<footer>
+		<div>
+			<div class="links"><a href="termos.html">Termos de Uso</a> | <a href="privacidade.html">Política de Privacidade</a></div>
+			<p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas e resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Sinta-se à vontade para falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.</p>
+		</div>
+	</footer>
+	<script>
+		function calculateHMSleft()
+		{
+			var now = new Date();
+			var hoursleft = 23-now.getHours();
+			var minutesleft = 59-now.getMinutes();
+			var secondsleft = 59-now.getSeconds();
+			if(minutesleft<10) minutesleft = "0"+minutesleft;
+			if(secondsleft<10) secondsleft = "0"+secondsleft;
+			document.getElementById('count').innerHTML = "FRETE GRÁTIS encerra em: "+hoursleft+"h "+minutesleft+"min e "+secondsleft+"seg";
+		}
+		calculateHMSleft();
+		setInterval(calculateHMSleft, 1000);
+	</script>
+</body>
+</html>
